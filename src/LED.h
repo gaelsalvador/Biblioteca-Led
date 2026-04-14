@@ -37,51 +37,62 @@ class led
          * @param pin Numero do pin digital a onde o led está
          */
         led(uint8_t pin);
+
         /**
          * @brief liga o led continuamente
          */
         void ligar();
+
         /**
          * @brief liga o led por um tempo determinado
          * @param tempo_ligado_ms determina o tempo que o led vai ficar ligado em milisegundo
          */
         void ligar(uint32_t tempo_ligado_ms);
+
         /**
          * @brief Desliga o led
          */
-        void desligar();//ok
+        void desligar();
+
         /**
          * @brief Pisca o led continuamente
          */
         void piscar();
+
         /**
          * @brief Pisca o led em uma determinada frequencia por segundo continuamente
          * @param frequencia frequencia que o led pisca por segundo
          */
         void piscar(float frequencia );
+
         /**
          * @brief Pisca o led em uma determinada frequencia por segundo , por uma quantidade determinada de vezes
          * @param frequencia frequencia que o led pisca por segundo
          * @param repeticoes determina a quantidade de vezes que o led pisca
          */
         void piscar(float frequencia, uint16_t repeticoes );
+
        /**
          * @brief Salva o estado do led
          */
         bool getestado();
+
         /**
          * @brief Salva o pino
          */
         uint8_t getpino(); 
+
         /**
-         * @brief Ele confirma o estado e o salva em outro atributo
-         * @param estado ele pega o estado do led
+         * @brief ele define manualmente o estado do led
+         * @param estado true para ligado e false para desligado
          */
         void setestado(bool estado);
+
         /**
          * @brief Alterna entre ligar e desligar o led, mais precisamente ele troca o estado do led
          */
         void alternar();
+        
         /**
          * @brief Ele gerencia as condições para  funções do led
          */
